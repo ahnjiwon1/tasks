@@ -1,13 +1,13 @@
 part of '../home_page.dart';
 
-// 7. ToDoEntity 를 인자로 받는 ToDoView 위젯 만들기
+// ToDoEntity 를 인자로 받는 ToDoView 위젯 만들기
 class ToDoView extends StatelessWidget {
   final ToDoEntity todo;
   final VoidCallback onToggleDone;
   final VoidCallback onToggleFavorite;
   final VoidCallback onTap;
 
-  // 7. VoidCallback 을 인자로 받으세요!
+  // VoidCallback 을 인자로 받으세요!
   const ToDoView({
     super.key,
     required this.todo,
@@ -21,12 +21,12 @@ class ToDoView extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        // 7. 마진 수직 8
+        // 마진 수직 8
         margin: const EdgeInsets.symmetric(vertical: 8),
         padding: const EdgeInsets.symmetric(horizontal: 16), // 7. 패딩 수평 16
         decoration: BoxDecoration(
           color: Colors.white,
-          // 7. 라운딩 12
+          // 라운딩 12
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
@@ -49,7 +49,7 @@ class ToDoView extends StatelessWidget {
               onPressed: onToggleDone,
             ),
             
-            const SizedBox(width: 12), // 7. 내부 요소들 간 간격 12
+            const SizedBox(width: 12), // 내부 요소들 간 간격 12
 
             // 텍스트(To Do의 title)
             Expanded(
@@ -57,7 +57,7 @@ class ToDoView extends StatelessWidget {
                 todo.title,
                 style: TextStyle(
                   fontSize: 16,
-                  // 7. Done 상태에 따라서 취소선 상태 적용
+                  // Done 상태에 따라서 취소선 상태 적용
                   decoration: todo.isDone ? TextDecoration.lineThrough : TextDecoration.none,
                   color: todo.isDone ? Colors.grey : Colors.black,
                 ),
@@ -66,7 +66,7 @@ class ToDoView extends StatelessWidget {
               ),
             ),
             
-            const SizedBox(width: 12), // 7. 내부 요소들 간 간격 12
+            const SizedBox(width: 12), // 내부 요소들 간 간격 12
 
             // Icon(star & star_border) : 버튼이 눌렸을 때 Favorite 상태 변경
             IconButton(
