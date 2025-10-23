@@ -17,7 +17,7 @@ class _AddToDoBottomSheetState extends State<AddToDoBottomSheet> {
   @override
   void initState() {
     super.initState();
-    // 6. 자동으로 ToDo 추가 창이 뜰 때 키보드가 뜨도록 구현
+    // 자동으로 ToDo 추가 창이 뜰 때 키보드가 뜨도록 구현
     // title 입력용 TextField에 focus가 잡히도록 구현
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _titleFocusNode.requestFocus();
@@ -37,11 +37,11 @@ class _AddToDoBottomSheetState extends State<AddToDoBottomSheet> {
     super.dispose();
   }
 
-  // 6. ToDo를 저장하는 함수(saveToDo())
+  // ToDo를 저장하는 함수(saveToDo())
   void _saveToDo() {
     final title = _titleController.text.trim();
     if (title.isEmpty) {
-      return; // 6. title이 비었을때는 작동되지 않도록 구현
+      return; // title이 비었을때는 작동되지 않도록 구현
     }
 
     final newTodo = ToDoEntity(
@@ -92,7 +92,7 @@ class _AddToDoBottomSheetState extends State<AddToDoBottomSheet> {
                     hintText: '세부정보 추가', // hint : 세부정보 추가
                     border: InputBorder.none,
                   ),
-                  style: const TextStyle(fontSize: 14), // 6. 텍스트 사이즈 14
+                  style: const TextStyle(fontSize: 14), // 텍스트 사이즈 14
                   maxLines: null, // 줄바꿈 적용
                   keyboardType: TextInputType.multiline,
                 ),
