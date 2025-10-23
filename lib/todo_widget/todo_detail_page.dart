@@ -59,7 +59,7 @@ class _ToDoDetailPageState extends State<ToDoDetailPage> {
                 color: _currentTodo.isFavorite ? Colors.amber : Colors.white,
                 size: 28,
               ),
-              onPressed: _toggleFavorite, // 8. favorite 변경 구현
+              onPressed: _toggleFavorite, // favorite 변경 구현
             ),
             const SizedBox(width: 8),
           ],
