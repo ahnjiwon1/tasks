@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
   // To Do 리스트
   List<ToDoEntity> _todoList = [];
 
-  // 5. addTodo 함수 작성 및 위젯에 연결
+  // addTodo 함수 작성 및 위젯에 연결
   void _addTodo() {
     showModalBottomSheet<ToDoEntity?>(
       context: context,
@@ -45,21 +45,21 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    // 5. title에 ‘사용자 이름`s Tasks’ 넣기
+    // title에 ‘사용자 이름`s Tasks’ 넣기
     final appBarTitle = "${widget.userName}'s Tasks";
     
-    // 7. To Do가 없을 때는 NoToDoView, 있을 때는 리스트 표시
+    // To Do가 없을 때는 NoToDoView, 있을 때는 리스트 표시
     final hasTasks = _todoList.isNotEmpty;
 
     return Scaffold(
-      resizeToAvoidBottomInset: false, // 6. FloatingActionButton 위치 고정
+      resizeToAvoidBottomInset: false, // FloatingActionButton 위치 고정
       appBar: AppBar(
         title: Text(
           appBarTitle,
           style: const TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.bold,
-            color: Colors.black87 // 5. AppBar title에 사이즈 20, 볼드체 적용
+            color: Colors.black87 // AppBar title에 사이즈 20, 볼드체 적용
           ),
         ),
         backgroundColor: Colors.deepOrangeAccent[100],
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                 );
               },
             )
-          : NoToDoView(appBarTitle: appBarTitle), // 5. 기본화면 (To Do 리스트가 없는 화면)
+          : NoToDoView(appBarTitle: appBarTitle), // 기본화면 (To Do 리스트가 없는 화면)
       
       floatingActionButton: FloatingActionButton(
         onPressed: _addTodo, // addTodo 함수 연결
