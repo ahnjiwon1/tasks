@@ -10,12 +10,12 @@ class NoToDoView extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: Container(
         width: double.infinity,
-        // 5. margin & padding 20 적용하기
+        // margin & padding 20 적용하기
         margin: const EdgeInsets.all(20),
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
           color: Colors.white,
-          // 5. 백그라운드 컬러 및 테두리 라운딩에 circular(12) 적용하기
+          // 백그라운드 컬러 및 테두리 라운딩에 circular(12) 적용하기
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
@@ -28,17 +28,18 @@ class NoToDoView extends StatelessWidget {
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
-          // 5. Column을 이용하여 수직으로 순서대로 배치
+          // Column을 이용하여 수직으로 순서대로 배치
           children: <Widget>[
-            // 5. 원하는 이미지 (가로&세로 100씩, webp)
+            // 원하는 이미지 (가로&세로 100씩, webp)
             Image.asset(
              'assets/empty.webp', // 경로 설정 확인
               width: 100,
               height: 100,
             ),
-            const SizedBox(height: 12), // 5. 각 요소간 간격 12 설정
+
+            const SizedBox(height: 12), // 각 요소간 간격 12 설정
             
-            // 5. 텍스트1(사이즈16, 볼드체 적용)
+            // 텍스트1(사이즈16, 볼드체 적용)
             const Text(
               "할 일이 없습니다!",
               style: TextStyle(
@@ -46,11 +47,12 @@ class NoToDoView extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 12), // 5. 각 요소간 간격 12 설정
 
-            // 5. 텍스트2(사이즈14, 높이 1.5, 가운데 정렬 적용, AppBar에 적용한 title을 받아 사용)
+            const SizedBox(height: 12), // 각 요소간 간격 12 설정
+
+            // 텍스트2(사이즈14, 높이 1.5, 가운데 정렬 적용, AppBar에 적용한 title을 받아 사용)
             Text(
-              "$appBarTitle\n에서 새로운 할 일을 추가해 보세요.",
+              "할 일을 추가하고 $appBarTitle\n에서 할 일을 추적하세요.",
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 14,
@@ -60,8 +62,8 @@ class NoToDoView extends StatelessWidget {
             ),
             const SizedBox(height: 24),
 
-            // 5. Icon 사용하기 (Icon Class의 add icon 사용)
-            // 5. 아이콘은 흰색, 사이즈 24, 배경은 원하는 색상, 버튼 모양은 원형 적용
+            // Icon 사용하기 (Icon Class의 add icon 사용)
+            // 아이콘은 흰색, 사이즈 24, 배경은 원하는 색상, 버튼 모양은 원형 적용
             Container(
               decoration: BoxDecoration(
                 color: Colors.deepPurple[400], // 원하는 색상
