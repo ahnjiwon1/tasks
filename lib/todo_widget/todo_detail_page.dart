@@ -91,7 +91,7 @@ class _ToDoDetailPageState extends State<ToDoDetailPage> {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
-                        color: Colors.indigo,
+                        color: Colors.deepPurple,
                       ),
                     ),
                     const SizedBox(height: 8),
