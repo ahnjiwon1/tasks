@@ -15,11 +15,11 @@ class _ToDoDetailPageState extends State<ToDoDetailPage> {
   @override
   void initState() {
     super.initState();
-    // 8. ToDoEntity를 받아서 화면 컨텐츠 채우기
+    // ToDoEntity를 받아서 화면 컨텐츠 채우기
     _currentTodo = widget.todo;
   }
 
-  // 8. favorite 변경 구현하기
+  // favorite 변경 구현하기
   void _toggleFavorite() {
     setState(() {
       _currentTodo = _currentTodo.copyWith(
@@ -33,7 +33,7 @@ class _ToDoDetailPageState extends State<ToDoDetailPage> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        // 8. 뒤로가기 시 변경된 ToDo 객체를 반환하여 이전 페이지(HomePage)에 반영
+        // 뒤로가기 시 변경된 ToDo 객체를 반환하여 이전 페이지(HomePage)에 반영
         Navigator.pop(context, _currentTodo);
         return false;
       },
@@ -47,11 +47,11 @@ class _ToDoDetailPageState extends State<ToDoDetailPage> {
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
-              // 8. back button을 통해서 뒤로가기 구현하기
+              // back button을 통해서 뒤로가기 구현하기
               Navigator.pop(context, _currentTodo);
             },
           ),
-          // 8. AppBar에 actions 사용하기 (Favorite 버튼)
+          // AppBar에 actions 사용하기 (Favorite 버튼)
           actions: <Widget>[
             IconButton(
               icon: Icon(
